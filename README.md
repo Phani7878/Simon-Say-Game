@@ -27,7 +27,7 @@ A web-based version of the classic "Simon Says" memory game. Test your memory sk
 
 ## 📥 Installation
 
-1. Clone this repository:   git clone https://github.com/Phani7878/Simon_Say Game.git
+1. Clone this repository:   git clone https://github.com/Phani7878/Simon-Say Game.git
 2. Navigate to the project directory: cd simon-says-game
 3. Open `index.html` in your browser to start playing.
 
