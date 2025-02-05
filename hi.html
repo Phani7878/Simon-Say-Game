@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout types</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .layout-selector {
+      margin: 20px;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    header, aside, main, footer {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      background-color: #85d612;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <div class="layout-selector">
+    <label>
+      <input type="radio" name="layout" value="default" checked>
+      Default Layout
+    </label>
+    <label>
+      <input type="radio" name="layout" value="grid">
+      Grid Layout
+    </label>
+    <label>
+      <input type=radio" name="layout" value="flex">
+      Flexbox Layout
+    </label>
+  </div>
+
+  <div class="container">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Main Content</main>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body{
+    text-align: center;
+}
+.btn{
+    height: 180px;
+    width: 180px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 1.5rem;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+.yellow{
+    background-color: #f99b45;
+}
+.green{
+    background-color: #63aaC0;
+}
+.purple{
+    background-color: #819ff9;
+}
+.red{
+    background-color: #d95980;
+}
+.flash{
+    background-color: white;
+}
+.userFlash{
+    background-color: green;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+  <style>
+    /* Default Theme (Light) */
+    :root {
+      --background-color: #ffffff;
+      --text-color: #000000;
+      --primary-color: #007bff;
+    }
+
+    /* Dark Theme */
+    [data-theme="dark"] {
+      --background-color: #181818;
+      --text-color: #ffffff;
+      --primary-color: #1e90ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Theme Switcher Example</h1>
+  <p>Click the button below to toggle between Light and Dark themes.</p>
+  <button onclick="toggleTheme()">Toggle Theme</button>
+
+  <script>
+    // Set the theme
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme); // Save theme preference
+    }
+
+    // Load the theme on page load
+    function loadTheme() {
+      const savedTheme = localStorage.getItem("theme") || "light"; // Default to light theme
+      setTheme(savedTheme);
+    }
+
+    // Toggle between light and dark themes
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      setTheme(newTheme);
+    }
+
+    // Initialize theme on page load
+    document.addEventListener("DOMContentLoaded", loadTheme);
+  </script>
+</body>
+</html>
